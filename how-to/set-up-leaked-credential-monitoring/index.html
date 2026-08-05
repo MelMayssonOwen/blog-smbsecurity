@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to set up leaked-credential monitoring in 15 minutes (free + paid)</title>
+<meta name="description" content="A step-by-step, free-first setup for your business domain: check exposure on HIBP, force resets, block breached passwords in Google/Microsoft, and turn on alerts.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/how-to/set-up-leaked-credential-monitoring/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to set up leaked-credential monitoring in 15 minutes (free + paid)">
+<meta property="og:description" content="A step-by-step, free-first setup for your business domain: check exposure on HIBP, force resets, block breached passwords in Google/Microsoft, and turn on alerts.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/how-to/set-up-leaked-credential-monitoring/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to set up leaked-credential monitoring in 15 minutes (free + paid)", "description": "A step-by-step, free-first setup for your business domain: check exposure on HIBP, force resets, block breached passwords in Google/Microsoft, and turn on alerts.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smallbizsecuritytips.blog/how-to/set-up-leaked-credential-monitoring/"}, "datePublished": "2026-08-05", "dateModified": "2026-08-05", "author": {"@type": "Organization", "name": "SmallBizSecurityTips", "url": "https://smallbizsecuritytips.blog"}, "publisher": {"@type": "Organization", "name": "Opsibyte", "url": "https://opsibyte.com"}, "isAccessibleForFree": true}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallbizsecuritytips.blog/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://smallbizsecuritytips.blog/guide/what-is-dark-web-monitoring/"}, {"@type": "ListItem", "position": 3, "name": "15-minute setup"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I set up dark web monitoring for my business domain?", "acceptedAnswer": {"@type": "Answer", "text": "Search your domain and staff emails on Have I Been Pwned and reset any exposed passwords; turn on breached-password blocking in Google Workspace or Microsoft 365; subscribe to HIBP notifications; and optionally add HIBP domain monitoring from about $4.39/month for continuous, domain-wide alerts. The free path takes roughly 15 minutes."}}, {"@type": "Question", "name": "Can I monitor my whole domain for leaked credentials for free?", "acceptedAnswer": {"@type": "Answer", "text": "You can check your domain and get notified for free using Have I Been Pwned's domain search and notifications after verifying ownership. Continuous, automated domain-wide monitoring is a paid subscription starting around $4.39/month, but the initial check and future breach alerts cost nothing."}}, {"@type": "Question", "name": "What should I do the moment a credential shows up as leaked?", "acceptedAnswer": {"@type": "Answer", "text": "Reset that password immediately, change it everywhere it was reused, and enable MFA on the account if it isn't already on. If the leak came from an infostealer infection, also invalidate active sessions and scan the affected device, because stolen session cookies can bypass MFA."}}, {"@type": "Question", "name": "Do I need to pay to block breached passwords?", "acceptedAnswer": {"@type": "Answer", "text": "No. Breached- and weak-password blocking is built into Google Workspace (password policies and monitoring) and Microsoft 365 / Entra ID (Entra Password Protection). NIST SP 800-63B recommends checking new passwords against breach corpora, and both providers can do it at no extra cost."}}]}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / <a href="/guide/what-is-dark-web-monitoring/">Guides</a> / 15-minute setup</div><main class="wrap"><article><div class="eyebrow">How-to</div><h1>How to set up leaked-credential monitoring in 15 minutes (free + paid)</h1><p class="updated">Updated <b>August 2026</b> &middot; independent comparison &middot; primary sources linked</p>
+<p class="lead">You can set up leaked-credential monitoring for your business domain in about <strong>15 minutes</strong>, mostly for free. The short version: (1) search your domain and staff emails on Have I Been Pwned and force resets on any hits; (2) turn on breached-password blocking in Google Workspace or Microsoft&nbsp;365; (3) subscribe to breach notifications; (4) if you want continuous domain-wide alerts, add HIBP&rsquo;s paid domain monitoring (from $4.39/mo). Here is the exact sequence.</p>
+
+<div class="key"><span class="lab">Before you start</span>You&rsquo;ll need admin access to your domain&rsquo;s DNS (to verify domain ownership for domain search) and to your identity provider (Google Workspace or Microsoft&nbsp;365). Total cost to complete the free path: <strong>$0</strong>.</div>
+
+<h2>Step 1 &mdash; Check what&rsquo;s already exposed (3 min)</h2>
+<p>Go to <a href="https://haveibeenpwned.com/">haveibeenpwned.com</a> and search your own work email and a few key staff addresses (owner, finance, admin). Note every breach listed. This is your starting exposure. For a whole domain, use HIBP&rsquo;s <a href="https://haveibeenpwned.com/DomainSearch">Domain search</a> &mdash; you verify ownership via a DNS TXT record or a file, then see every breached address on the domain.</p>
+
+<h2>Step 2 &mdash; Force resets on every hit (5 min)</h2>
+<p>For each exposed account, reset the password to a unique, long passphrase and, critically, <strong>change it anywhere the same password was reused</strong>. Reuse is what turns one old breach into a live break-in. If the account had no MFA, add it now.</p>
+
+<h2>Step 3 &mdash; Turn on breached-password blocking (3 min)</h2>
+<p>Both major providers can reject known-compromised passwords automatically &mdash; this is exactly what <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST SP&nbsp;800-63B</a> recommends:</p>
+<ul>
+<li><strong>Google Workspace:</strong> Admin console &rarr; Security &rarr; enforce password strength and length, enable password monitoring/alerts, and require 2-Step Verification.</li>
+<li><strong>Microsoft&nbsp;365 / Entra ID:</strong> enable Microsoft Entra Password Protection (blocks weak and banned passwords) and turn on security defaults or Conditional Access for MFA.</li>
+</ul>
+<p>This stops staff from setting a password that&rsquo;s already in a breach corpus &mdash; prevention that costs nothing.</p>
+
+<h2>Step 4 &mdash; Subscribe to ongoing notifications (2 min)</h2>
+<p>On HIBP, use <strong>Notify me</strong> for individual addresses and, for a domain, opt into domain notifications so you&rsquo;re emailed when a new breach includes your people. Free.</p>
+
+<h2>Step 5 (optional) &mdash; Add continuous domain monitoring (2 min)</h2>
+<p>If checking manually isn&rsquo;t enough and you want hands-off, domain-wide alerting across every mailbox, subscribe to HIBP&rsquo;s <strong>Core 1</strong> ($4.39/mo, 1 domain) or <strong>Core 3</strong> ($36.99/mo, 5 domains). Larger MSPs step up from there. Compare on the <a href="/pricing/dark-web-monitoring-cost-comparison/">pricing page</a>.</p>
+
+<h2>What this does and doesn&rsquo;t buy you</h2>
+<div class="note"><span class="lab">Set expectations</span>This setup gives you <strong>early warning</strong> and <strong>prevention of reused/weak passwords</strong>. It does <em>not</em> remove leaked data from criminal markets (nothing does &mdash; <a href="/guide/does-dark-web-monitoring-remove-data/">why</a>), and it doesn&rsquo;t stop session-cookie theft by infostealer malware &mdash; for that you also need endpoint protection and to invalidate sessions after any device compromise (<a href="/guide/mfa-and-infostealers/">details</a>).</p>
+
+<div class="note"><span class="lab">Disclosure &middot; adjacent tool</span><strong>BreachTrigger</strong> does something different from the credential monitors on this page: it watches U.S. SEC EDGAR filings every 30 minutes and alerts you when a <em>public company</em> files an Item 1.05 &ldquo;material cybersecurity incident&rdquo; 8-K &mdash; useful for knowing fast when a vendor or partner you rely on discloses a breach. It does <em>not</em> scan dark-web dumps for your passwords, so it is not a like-for-like HIBP alternative. <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger &rarr;</a> (free weekly digest; instant alerts $199/mo). Made by this site&rsquo;s publisher.</div>
+
+<div class="verdict"><b>15-minute result:</b> exposed passwords reset, reuse killed, weak/breached passwords blocked going forward, and alerts on for the future &mdash; almost entirely free, with an optional ~$4.39/mo upgrade for continuous domain monitoring.</div>
+<h2 id="faq">Frequently asked questions</h2><div class="faq"><details><summary>How do I set up dark web monitoring for my business domain?</summary><div class="ans">Search your domain and staff emails on Have I Been Pwned and reset any exposed passwords; turn on breached-password blocking in Google Workspace or Microsoft 365; subscribe to HIBP notifications; and optionally add HIBP domain monitoring from about $4.39/month for continuous, domain-wide alerts. The free path takes roughly 15 minutes.</div></details><details><summary>Can I monitor my whole domain for leaked credentials for free?</summary><div class="ans">You can check your domain and get notified for free using Have I Been Pwned's domain search and notifications after verifying ownership. Continuous, automated domain-wide monitoring is a paid subscription starting around $4.39/month, but the initial check and future breach alerts cost nothing.</div></details><details><summary>What should I do the moment a credential shows up as leaked?</summary><div class="ans">Reset that password immediately, change it everywhere it was reused, and enable MFA on the account if it isn't already on. If the leak came from an infostealer infection, also invalidate active sessions and scan the affected device, because stolen session cookies can bypass MFA.</div></details><details><summary>Do I need to pay to block breached passwords?</summary><div class="ans">No. Breached- and weak-password blocking is built into Google Workspace (password policies and monitoring) and Microsoft 365 / Entra ID (Entra Password Protection). NIST SP 800-63B recommends checking new passwords against breach corpora, and both providers can do it at no extra cost.</div></details></div><div class="sources"><h2>Primary sources</h2><ol><li><a href="https://haveibeenpwned.com/" rel="noopener" target="_blank">Have I Been Pwned &amp;mdash; homepage breach counts &amp;amp; FAQ</a></li><li><a href="https://haveibeenpwned.com/DomainSearch" rel="noopener" target="_blank">Have I Been Pwned &amp;mdash; Domain search / subscriptions</a></li><li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" rel="noopener" target="_blank">NIST SP 800-63B &amp;mdash; Digital Identity Guidelines (Authentication)</a></li><li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-137a" rel="noopener" target="_blank">CISA &amp;amp; partners, Advisory AA22-137A &amp;mdash; &amp;ldquo;Weak Security Controls and Practices Routinely Exploited for Initial Access&amp;rdquo;</a></li><li><a href="https://www.ftc.gov/business-guidance/small-businesses/cybersecurity" rel="noopener" target="_blank">FTC &amp;mdash; Cybersecurity for Small Business</a></li></ol></div><p class="disc">Disclosure: This site is published by Opsibyte, which operates BreachTrigger. Where BreachTrigger is mentioned it is labelled and linked with <code>rel="nofollow sponsored"</code>, and it is compared honestly alongside independent tools. Pricing and features for third-party products were taken from each vendor&rsquo;s own materials as of August 2026; verify current details on the vendor&rsquo;s site before buying.</p></article></main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Published by Opsibyte, which also operates <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger</a>; that relationship is disclosed on every page where the product is mentioned. Content is informational only and is not legal or security advice &mdash; verify against the linked primary sources before acting.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>We have MFA - do we still need credential monitoring? (Infostealers explained)</title>
+<meta name="description" content="Yes. Infostealer malware steals active session cookies to bypass MFA entirely. How session hijacking works, why resetting the password isn&#x27;t enough, and what actually closes the gap.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/guide/mfa-and-infostealers/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="We have MFA - do we still need credential monitoring? (Infostealers explained)">
+<meta property="og:description" content="Yes. Infostealer malware steals active session cookies to bypass MFA entirely. How session hijacking works, why resetting the password isn&#x27;t enough, and what actually closes the gap.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/guide/mfa-and-infostealers/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "We have MFA - do we still need credential monitoring? (Infostealers explained)", "description": "Yes. Infostealer malware steals active session cookies to bypass MFA entirely. How session hijacking works, why resetting the password isn't enough, and what actually closes the gap.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smallbizsecuritytips.blog/guide/mfa-and-infostealers/"}, "datePublished": "2026-08-05", "dateModified": "2026-08-05", "author": {"@type": "Organization", "name": "SmallBizSecurityTips", "url": "https://smallbizsecuritytips.blog"}, "publisher": {"@type": "Organization", "name": "Opsibyte", "url": "https://opsibyte.com"}, "isAccessibleForFree": true}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallbizsecuritytips.blog/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://smallbizsecuritytips.blog/guide/what-is-dark-web-monitoring/"}, {"@type": "ListItem", "position": 3, "name": "MFA & infostealers"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "If we use MFA, do we still need dark web / credential monitoring?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Infostealer malware steals active session cookies from a logged-in browser, letting an attacker resume the session without a password or MFA challenge. Monitoring stealer-log data is how you learn a device was compromised, and it tells you to invalidate sessions, not just reset a password."}}, {"@type": "Question", "name": "How do attackers bypass MFA?", "acceptedAnswer": {"@type": "Answer", "text": "The common method today is session-cookie theft: malware or a real-time phishing proxy captures the authenticated session token issued after you log in. Importing that token resumes your session, so the attacker never faces the MFA prompt. Passkeys/FIDO2 and short session lifetimes reduce, but do not fully eliminate, the risk."}}, {"@type": "Question", "name": "Is resetting the password enough after an infostealer infection?", "acceptedAnswer": {"@type": "Answer", "text": "No. You must also invalidate active sessions (force sign-out everywhere) and remove the malware from the device. Otherwise the stolen session cookie may still work, and an active infection can simply steal the new password too."}}, {"@type": "Question", "name": "What is a session cookie and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "A session cookie (or token) is what an app stores in your browser after you log in so it doesn't re-prompt you on every action. Because it represents an already-authenticated session, stealing it lets an attacker act as you without needing your password or second factor."}}]}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / <a href="/guide/what-is-dark-web-monitoring/">Guides</a> / MFA &amp; infostealers</div><main class="wrap"><article><div class="eyebrow">Security explainer</div><h1>We have MFA - do we still need credential monitoring? (Infostealers explained)</h1><p class="updated">Updated <b>August 2026</b> &middot; independent comparison &middot; primary sources linked</p>
+<p class="lead">Yes &mdash; you still need credential monitoring even with MFA everywhere, because the fastest-growing attack doesn&rsquo;t bother with your password <em>or</em> your second factor. <strong>Infostealer malware</strong> steals the <strong>active session cookies</strong> already sitting in a logged-in browser. An attacker imports that cookie and resumes your session as if they&rsquo;d passed MFA &mdash; because, from the app&rsquo;s view, someone already did. MFA raises the bar against password-only attacks; it does not stop session hijacking. Monitoring stealer-log data is how you find out a device was compromised.</p>
+
+<h2>How MFA gets bypassed without breaking it</h2>
+<p>MFA protects the <em>login</em> event. But once you log in, the app issues a <strong>session token/cookie</strong> so it doesn&rsquo;t ask again on every click. Infostealers (RedLine, Lumma, Vidar and their successors) harvest those tokens, plus saved passwords and autofill data, straight off an infected device. With a valid session cookie an attacker:</p>
+<ul>
+<li>skips the username/password prompt entirely,</li>
+<li>skips the MFA challenge (the session is already authenticated), and</li>
+<li>lands inside the account until the session expires or is revoked.</li>
+</ul>
+<p>This is why enterprise tools like <a href="/vs/spycloud/">SpyCloud</a> emphasise &ldquo;post-infection remediation&rdquo; &mdash; <em>invalidating sessions</em>, not just resetting passwords.</p>
+
+<div class="note"><span class="lab">The key nuance</span>Resetting the password after an infostealer hit is <strong>not enough</strong>. If you don&rsquo;t also invalidate active sessions and remove the malware, the stolen cookie may still work and the device may just re-steal the new credentials.</div>
+
+<h2>Why this ties back to monitoring</h2>
+<p>Classic breach checkers see database dumps. Infostealer data shows up in <strong>stealer logs</strong> &mdash; and that&rsquo;s exactly where you learn one of your team&rsquo;s devices is infected, often before any account is misused. Have I Been Pwned has ingested some stealer-log data; dedicated platforms (Flare, SpyCloud) specialise in it. Either way, monitoring is your signal that MFA alone won&rsquo;t save this account.</p>
+
+<h2>What to do about it</h2>
+<ol>
+<li><strong>Keep MFA on</strong> &mdash; ideally phishing-resistant (passkeys / FIDO2), which also resists many real-time phishing proxies.</li>
+<li><strong>Monitor stealer-log exposure</strong> so an infection surfaces fast.</li>
+<li><strong>On any hit: invalidate sessions</strong> (force sign-out everywhere) as well as resetting the password.</li>
+<li><strong>Run real endpoint protection</strong> and patch &mdash; the malware is the root cause; the leaked cookie is the symptom.</li>
+<li><strong>Shorten session lifetimes</strong> for sensitive apps so a stolen cookie expires sooner.</li>
+</ol>
+<p>The CISA/NSA/FBI advisory <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-137a">AA22-137A</a> puts weak credential and access controls at the top of routinely exploited weaknesses; session theft is the modern twist that makes &ldquo;we have MFA&rdquo; an incomplete answer.</p>
+
+<div class="note"><span class="lab">Disclosure &middot; adjacent tool</span><strong>BreachTrigger</strong> does something different from the credential monitors on this page: it watches U.S. SEC EDGAR filings every 30 minutes and alerts you when a <em>public company</em> files an Item 1.05 &ldquo;material cybersecurity incident&rdquo; 8-K &mdash; useful for knowing fast when a vendor or partner you rely on discloses a breach. It does <em>not</em> scan dark-web dumps for your passwords, so it is not a like-for-like HIBP alternative. <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger &rarr;</a> (free weekly digest; instant alerts $199/mo). Made by this site&rsquo;s publisher.</div>
+
+<div class="verdict"><b>Bottom line:</b> MFA is necessary and you should keep it &mdash; but infostealers steal the session <em>after</em> login, so credential/stealer-log monitoring plus session-invalidation and endpoint protection are what close the gap. &ldquo;We have MFA&rdquo; is a starting line, not a finish line.</div>
+<h2 id="faq">Frequently asked questions</h2><div class="faq"><details><summary>If we use MFA, do we still need dark web / credential monitoring?</summary><div class="ans">Yes. Infostealer malware steals active session cookies from a logged-in browser, letting an attacker resume the session without a password or MFA challenge. Monitoring stealer-log data is how you learn a device was compromised, and it tells you to invalidate sessions, not just reset a password.</div></details><details><summary>How do attackers bypass MFA?</summary><div class="ans">The common method today is session-cookie theft: malware or a real-time phishing proxy captures the authenticated session token issued after you log in. Importing that token resumes your session, so the attacker never faces the MFA prompt. Passkeys/FIDO2 and short session lifetimes reduce, but do not fully eliminate, the risk.</div></details><details><summary>Is resetting the password enough after an infostealer infection?</summary><div class="ans">No. You must also invalidate active sessions (force sign-out everywhere) and remove the malware from the device. Otherwise the stolen session cookie may still work, and an active infection can simply steal the new password too.</div></details><details><summary>What is a session cookie and why does it matter?</summary><div class="ans">A session cookie (or token) is what an app stores in your browser after you log in so it doesn't re-prompt you on every action. Because it represents an already-authenticated session, stealing it lets an attacker act as you without needing your password or second factor.</div></details></div><div class="sources"><h2>Primary sources</h2><ol><li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-137a" rel="noopener" target="_blank">CISA &amp;amp; partners, Advisory AA22-137A &amp;mdash; &amp;ldquo;Weak Security Controls and Practices Routinely Exploited for Initial Access&amp;rdquo;</a></li><li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" rel="noopener" target="_blank">NIST SP 800-63B &amp;mdash; Digital Identity Guidelines (Authentication)</a></li><li><a href="https://haveibeenpwned.com/" rel="noopener" target="_blank">Have I Been Pwned &amp;mdash; homepage breach counts &amp;amp; FAQ</a></li><li><a href="https://www.troyhunt.com/" rel="noopener" target="_blank">Troy Hunt &amp;mdash; blog (HIBP announcements, stealer logs)</a></li></ol></div><p class="disc">Disclosure: This site is published by Opsibyte, which operates BreachTrigger. Where BreachTrigger is mentioned it is labelled and linked with <code>rel="nofollow sponsored"</code>, and it is compared honestly alongside independent tools. Pricing and features for third-party products were taken from each vendor&rsquo;s own materials as of August 2026; verify current details on the vendor&rsquo;s site before buying.</p></article></main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Published by Opsibyte, which also operates <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger</a>; that relationship is disclosed on every page where the product is mentioned. Content is informational only and is not legal or security advice &mdash; verify against the linked primary sources before acting.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>

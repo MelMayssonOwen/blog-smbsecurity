@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NIST password rules 2026: check against breached passwords (SP 800-63B)</title>
+<meta name="description" content="NIST SP 800-63B says screen new passwords against breach lists and reject matches - and drop forced expiry and complexity rules. What it means and how to turn it on free.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/guide/nist-password-breach-check/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NIST password rules 2026: check against breached passwords (SP 800-63B)">
+<meta property="og:description" content="NIST SP 800-63B says screen new passwords against breach lists and reject matches - and drop forced expiry and complexity rules. What it means and how to turn it on free.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/guide/nist-password-breach-check/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "NIST password rules 2026: check against breached passwords (SP 800-63B)", "description": "NIST SP 800-63B says screen new passwords against breach lists and reject matches - and drop forced expiry and complexity rules. What it means and how to turn it on free.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smallbizsecuritytips.blog/guide/nist-password-breach-check/"}, "datePublished": "2026-08-05", "dateModified": "2026-08-05", "author": {"@type": "Organization", "name": "SmallBizSecurityTips", "url": "https://smallbizsecuritytips.blog"}, "publisher": {"@type": "Organization", "name": "Opsibyte", "url": "https://opsibyte.com"}, "isAccessibleForFree": true}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallbizsecuritytips.blog/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://smallbizsecuritytips.blog/guide/what-is-dark-web-monitoring/"}, {"@type": "ListItem", "position": 3, "name": "NIST password rules"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does NIST say about breached passwords?", "acceptedAnswer": {"@type": "Answer", "text": "NIST SP 800-63B says that when a user sets or changes a password, you should screen it against lists of known-compromised passwords (from breaches and dictionaries) and reject any match. It also advises favouring length over complexity, not forcing routine password expiry, and allowing password managers."}}, {"@type": "Question", "name": "Does NIST still recommend forcing password changes every 90 days?", "acceptedAnswer": {"@type": "Answer", "text": "No. NIST SP 800-63B advises against routine forced expiry. Passwords should be changed on evidence of compromise, not on an arbitrary schedule, because forced periodic changes tend to produce weaker, predictable passwords."}}, {"@type": "Question", "name": "How do I block breached passwords for free?", "acceptedAnswer": {"@type": "Answer", "text": "Use the breached-password protection built into your identity provider: Google Workspace password policies and monitoring, or Microsoft Entra Password Protection. Both can reject known-weak or banned passwords at no extra cost, implementing the screening NIST recommends."}}]}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / <a href="/guide/what-is-dark-web-monitoring/">Guides</a> / NIST password rules</div><main class="wrap"><article><div class="eyebrow">Standards explainer</div><h1>NIST password rules 2026: check against breached passwords (SP 800-63B)</h1><p class="updated">Updated <b>August 2026</b> &middot; independent comparison &middot; primary sources linked</p>
+<p class="lead">Modern NIST guidance (SP&nbsp;800-63B) tells you to <strong>check new passwords against lists of known-breached passwords and reject any that match</strong> &mdash; and to <em>stop</em> the old habits of forced periodic changes and complex-character rules that pushed people toward weak, reused passwords. For a small business this means one high-value action: turn on breached-password blocking (built into Google Workspace and Microsoft&nbsp;365), so no one can set a password that&rsquo;s already circulating in breach dumps.</p>
+
+<h2>What NIST SP 800-63B actually says</h2>
+<p>The relevant guidance (in the password/&ldquo;memorized secret&rdquo; section) includes:</p>
+<ul>
+<li><strong>Screen against breach corpora:</strong> when a user sets or changes a password, compare it against a list of values known to be compromised (from breaches, dictionaries, repetitive strings) and reject matches.</li>
+<li><strong>Length over complexity:</strong> allow long passphrases; don&rsquo;t mandate arbitrary character-composition rules.</li>
+<li><strong>No routine forced expiry:</strong> don&rsquo;t force periodic changes without a reason &mdash; change only on evidence of compromise.</li>
+<li><strong>Allow paste &amp; password managers:</strong> support usability so people choose strong, unique secrets.</li>
+</ul>
+<p>Read the primary source: <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST SP&nbsp;800-63B, Digital Identity Guidelines</a>.</p>
+
+<h2>How this connects to leaked-credential monitoring</h2>
+<div class="key"><span class="lab">Prevention + detection</span>Breach-password screening is the <strong>prevention</strong> half (stop people using an already-leaked password); credential monitoring is the <strong>detection</strong> half (find out when a currently-used credential leaks). You want both. The free Pwned Passwords API from HIBP is a common way to implement the screening NIST recommends.</div>
+
+<h2>Turn it on (free, both major providers)</h2>
+<ul>
+<li><strong>Google Workspace:</strong> enforce password length/strength and enable password monitoring &amp; alerts in the Admin console; require 2-Step Verification.</li>
+<li><strong>Microsoft&nbsp;365 / Entra ID:</strong> enable Entra Password Protection (blocks weak and banned passwords, including a custom banned list) and enforce MFA via security defaults or Conditional Access.</li>
+</ul>
+<p>Both align you with 800-63B at no extra cost, and the <a href="https://www.ftc.gov/business-guidance/small-businesses/cybersecurity">FTC&rsquo;s small-business guidance</a> points the same direction.</p>
+
+<div class="note"><span class="lab">Disclosure &middot; adjacent tool</span><strong>BreachTrigger</strong> does something different from the credential monitors on this page: it watches U.S. SEC EDGAR filings every 30 minutes and alerts you when a <em>public company</em> files an Item 1.05 &ldquo;material cybersecurity incident&rdquo; 8-K &mdash; useful for knowing fast when a vendor or partner you rely on discloses a breach. It does <em>not</em> scan dark-web dumps for your passwords, so it is not a like-for-like HIBP alternative. <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger &rarr;</a> (free weekly digest; instant alerts $199/mo). Made by this site&rsquo;s publisher.</div><h2 id="faq">Frequently asked questions</h2><div class="faq"><details><summary>What does NIST say about breached passwords?</summary><div class="ans">NIST SP 800-63B says that when a user sets or changes a password, you should screen it against lists of known-compromised passwords (from breaches and dictionaries) and reject any match. It also advises favouring length over complexity, not forcing routine password expiry, and allowing password managers.</div></details><details><summary>Does NIST still recommend forcing password changes every 90 days?</summary><div class="ans">No. NIST SP 800-63B advises against routine forced expiry. Passwords should be changed on evidence of compromise, not on an arbitrary schedule, because forced periodic changes tend to produce weaker, predictable passwords.</div></details><details><summary>How do I block breached passwords for free?</summary><div class="ans">Use the breached-password protection built into your identity provider: Google Workspace password policies and monitoring, or Microsoft Entra Password Protection. Both can reject known-weak or banned passwords at no extra cost, implementing the screening NIST recommends.</div></details></div><div class="sources"><h2>Primary sources</h2><ol><li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" rel="noopener" target="_blank">NIST SP 800-63B &amp;mdash; Digital Identity Guidelines (Authentication)</a></li><li><a href="https://haveibeenpwned.com/" rel="noopener" target="_blank">Have I Been Pwned &amp;mdash; homepage breach counts &amp;amp; FAQ</a></li><li><a href="https://www.ftc.gov/business-guidance/small-businesses/cybersecurity" rel="noopener" target="_blank">FTC &amp;mdash; Cybersecurity for Small Business</a></li><li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-137a" rel="noopener" target="_blank">CISA &amp;amp; partners, Advisory AA22-137A &amp;mdash; &amp;ldquo;Weak Security Controls and Practices Routinely Exploited for Initial Access&amp;rdquo;</a></li></ol></div><p class="disc">Disclosure: This site is published by Opsibyte, which operates BreachTrigger. Where BreachTrigger is mentioned it is labelled and linked with <code>rel="nofollow sponsored"</code>, and it is compared honestly alongside independent tools. Pricing and features for third-party products were taken from each vendor&rsquo;s own materials as of August 2026; verify current details on the vendor&rsquo;s site before buying.</p></article></main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Published by Opsibyte, which also operates <a href="https://breachtrigger.com" rel="nofollow sponsored">BreachTrigger</a>; that relationship is disclosed on every page where the product is mentioned. Content is informational only and is not legal or security advice &mdash; verify against the linked primary sources before acting.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
