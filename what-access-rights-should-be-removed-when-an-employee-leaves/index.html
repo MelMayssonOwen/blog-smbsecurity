@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Access Rights Should Be Removed When an Employee Leaves?</title>
+<meta name="description" content="Remove email, password reset, SSO, and admin access first, then transfer ownership, disable sign-in, and clean up devices and sessions. The exact list depends on what the employee actually used, so work from an app inventory and revoke access system by system.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/what-access-rights-should-be-removed-when-an-employee-leaves/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Access Rights Should Be Removed When an Employee Leaves?">
+<meta property="og:description" content="Remove email, password reset, SSO, and admin access first, then transfer ownership, disable sign-in, and clean up devices and sessions. The exact list depends on what the employee actually used, so work from an app inventory and revoke access system by system.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/what-access-rights-should-be-removed-when-an-employee-leaves/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smallbizsecuritytips.blog/"},{"@type":"ListItem","position":2,"name":"What Access Rights Should Be Removed When an Employee Leaves?","item":"https://smallbizsecuritytips.blog/what-access-rights-should-be-removed-when-an-employee-leaves/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Access Rights Should Be Removed When an Employee Leaves?","description":"Remove email, password reset, SSO, and admin access first, then transfer ownership, disable sign-in, and clean up devices and sessions. The exact list depends on what the employee actually used, so work from an app inventory and revoke access system by system.","datePublished":"2026-10-31T08:29:01.490Z","dateModified":"2026-10-31T08:29:01.490Z","mainEntityOfPage":"https://smallbizsecuritytips.blog/what-access-rights-should-be-removed-when-an-employee-leaves/","author":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"},"publisher":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"}}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / About</div><main class="wrap">
+<div class="crumb"><a href="/">Home</a> / What Access Rights Should Be Removed When an Employee Leaves?</div>
+<article>
+<h1>What Access Rights Should Be Removed When an Employee Leaves?</h1>
+<p class="updated">Published 2026-10-31</p>
+<div class="tldr"><p><strong>TL;DR:</strong> Remove email, password reset, SSO, and admin access first, then transfer ownership, disable sign-in, and clean up devices and sessions. The exact list depends on what the employee actually used, so work from an app inventory and revoke access system by system.</p></div>
+<h2>Start by revoking the access that can expose everything</h2>
+<p>When an employee leaves, remove the access that can be used to get into everything else first. That usually means email, password reset access, single sign-on, and any admin accounts. If someone can still open a mailbox, they may be able to reset passwords or reach connected services, which is why CISA and NIST both treat account disablement and least privilege as basic offboarding hygiene, not optional busywork (CISA account and access control guidance and <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final">NIST SP 800-53 account management and access control</a>).</p>
+<p>In plain English, the “keys to the kingdom” go first. Email is usually the biggest one because it can expose password resets, customer messages, and connected logins. Admin accounts come next, because admin rights are basically the corporate version of a skeleton key.</p>
+<h2>Revoke access by system, not by role title</h2>
+<p>Do not assume a job title tells you what to remove. A small business owner or manager should work from an app inventory, because the exact list depends on what that person actually used.</p>
+<p>Common places to check include email and calendar, cloud storage and shared drives, accounting and payroll, CRM, file-sharing tools, messaging apps, remote access, domain or website hosting, backup consoles, and any shared credentials or recovery contacts.</p>
+<p>This is the annoying part, but it is the part that saves you from the “wait, who still has access to payroll?” moment two weeks later. If the employee touched a system, remove their access there directly.</p>
+<h2>Remove privileges before deleting the account</h2>
+<p>Before you disable or delete anything, transfer ownership of business files, inboxes, calendars, and customer records to the right person. Then remove admin rights, API keys, app passwords, recovery emails, and device trust.</p>
+<p>That order matters. If you delete first and sort ownership later, you can lock the business out of files, shared mailboxes, or customer data. CISA’s account management guidance and NIST’s least-privilege approach both point toward controlled removal, not a rip-the-bandage-off-and-hope situation (CISA, <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final">NIST SP 800-53 Rev. 5</a>).</p>
+<p>So the practical sequence is:</p>
+<ol>
+<li>Transfer what the business still needs.</li>
+<li>Remove elevated permissions and recovery methods.</li>
+<li>Disable sign-in.</li>
+<li>Delete the account only after you know nothing important is stranded behind it.</li>
+</ol>
+<h2>Check devices and sessions too</h2>
+<p>Account access is not just a username and password problem. Sign out of laptops, phones, browsers, and VPN or remote desktop sessions. If the employee had access to company data on a device, remove corporate profiles, encryption keys, and saved authentication methods too.</p>
+<p>This is the stuff people forget because it is invisible until it bites. A browser still signed into email, or a VPN session that never got kicked out, can keep a door open long after the employee left the building.</p>
+<h2>Worked example: a departing office manager with email, payroll, and shared-drive access</h2>
+<p>Say your office manager is leaving. They handled the main inbox, payroll reminders, and the shared drive where vendor files live.</p>
+<p>Here is the clean order for a non-technical owner:</p>
+<ol>
+<li>Identify every system they used, starting with email, payroll, and shared storage.</li>
+<li>Transfer ownership of the shared drive folders, the office mailbox, and any calendars or records they managed.</li>
+<li>Remove any admin rights, recovery email settings, and password reset ability.</li>
+<li>Remove access to payroll, remote logins, and any shared credentials.</li>
+<li>Sign them out of mail, browser sessions, and any devices tied to company data.</li>
+<li>Disable the account.</li>
+<li>Confirm the account no longer works and that the new owner can open the files and inboxes they need.</li>
+</ol>
+<p>The check afterward is simple: can the new person get in, and can the departing person still get in? You want one yes and one no.</p>
+<h2>Quick offboarding checklist for owners without IT</h2>
+<p>Use this plain-language sequence:</p>
+<ol>
+<li>Identify every system the employee used.</li>
+<li>Transfer ownership of files, inboxes, calendars, and records.</li>
+<li>Remove admin rights, reset powers, and any special recovery access.</li>
+<li>Disable sign-in.</li>
+<li>Collect devices and remove saved trust or recovery methods.</li>
+<li>Confirm the account no longer works.</li>
+</ol>
+<p>That is the whole movie. Everything else is a subplot.</p>
+<h2>Helpful background on why access reviews matter</h2>
+<p>The FTC’s small-business cybersecurity basics page is useful background because it reinforces the broader habit of limiting access, using strong account protections, and keeping security practices simple enough to actually follow (<a href="https://smallbizsecuritytips.blog/what-cybersecurity-basics-does-the-ftc-recommend-for-small/">What cybersecurity basics does the FTC recommend for small businesses?</a>). That matters here because offboarding is closely related to access control.</p>
+<h2>Helpful background on breach-related account risk</h2>
+<p>CISA and NIST guidance on account disablement and least privilege help explain the risk of leaving old email access in place after someone departs or after a breach. If an account stays live, it can keep exposing messages, resets, and connected services, which makes the cleanup bigger and the damage wider (CISA, <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final">NIST SP 800-53 Rev. 5</a>). In other words, old access has a habit of becoming new trouble.</p>
+
+</article>
+</main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Content is informational only and is not legal or security advice, verify against the linked primary sources before acting.</p>
+<p class="disc-note">Disclosure: this site features commercial partners and promoted placements, which can influence which products appear and how they are ranked. Comparisons reflect our own research and opinion. Verify current pricing and features on each provider’s site before buying.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
