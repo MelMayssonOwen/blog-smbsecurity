@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Are Phishing-Resistant MFA Methods?</title>
+<meta name="description" content="Phishing-resistant MFA means the login is tied to the real site or app, so stolen codes are much harder to reuse.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Are Phishing-Resistant MFA Methods?">
+<meta property="og:description" content="Phishing-resistant MFA means the login is tied to the real site or app, so stolen codes are much harder to reuse.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smallbizsecuritytips.blog/"},{"@type":"ListItem","position":2,"name":"What Are Phishing-Resistant MFA Methods?","item":"https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Are Phishing-Resistant MFA Methods?","description":"Phishing-resistant MFA means the login is tied to the real site or app, so stolen codes are much harder to reuse.","datePublished":"2026-11-02T09:47:01.193Z","dateModified":"2026-11-02T09:47:01.193Z","mainEntityOfPage":"https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/","author":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"},"publisher":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"}}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / About</div><main class="wrap">
+<div class="crumb"><a href="/">Home</a> / What Are Phishing-Resistant MFA Methods?</div>
+<article>
+<h1>What Are Phishing-Resistant MFA Methods?</h1>
+<p class="updated">Published 2026-11-02</p>
+<div class="tldr"><p><strong>TL;DR:</strong> Phishing-resistant MFA means the login is tied to the real site or app, so stolen codes are much harder to reuse.</p></div>
+<h2>What phishing-resistant MFA means</h2>
+<p>Phishing-resistant MFA methods tie the sign-in attempt to the actual website or app. That makes a stolen code much harder to replay in a phishing attack. Both CISA’s guidance on phishing-resistant authentication and <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST SP 800-63B</a> boil down to the same idea. In plain English, you prove who you are in a way that is bound to the real service, not something a fake site can simply grab and forward like an unwanted relay race.</p>
+<h2>What makes an MFA method phishing-resistant</h2>
+<p>The core idea is straightforward. A phishing-resistant method verifies you are logging into the genuine service, not a convincing copy. The proof of identity gets cryptographically bound to the intended site or app. A fake login page cannot steal a reusable secret it can later paste into the real one. That is why these methods get treated differently from codes you could type anywhere.</p>
+<h2>The main phishing-resistant MFA methods</h2>
+<h3>FIDO2 security keys</h3>
+<p> For a small business the win is obvious: strong protection with one quick tap. The downside is that people have to keep track of a physical key.</p>
+<h3>Passkeys</h3>
+<p> They work especially well when your team logs in from laptops, phones, or both and nobody wants yet another password-shaped headache.</p>
+<h3>Smart cards or PIV/CAC-style credentials</h3>
+<p>Smart cards and PIV/CAC-style credentials are authentication options. NIST includes them as cryptographic authentication options. They are useful to know about if you need to distinguish older certificate-based setups from modern passkeys, but for many small businesses they are more specialized than the usual day-to-day login setup.</p>
+<h3>Certificate-based authentication on managed devices</h3>
+<p> NIST treats certificate-based methods as cryptographic authenticators in the right setup. The catch is that they usually fit best where devices are managed and the login path is controlled, which is more structured than most tiny businesses want on a Tuesday afternoon.</p>
+<h2>Methods that are not phishing-resistant, even though they are MFA</h2>
+<p> Phishing-resistant methods bind the authentication to the real service. The FTC also recommends MFA as a basic defense for small businesses, but that does not mean every MFA method has the same resistance to phishing. So yes, they help. No, they are not the top-shelf anti-phishing version.</p>
+<h2>Phishing-resistant vs common non-resistant MFA</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Security against phishing</th>
+<th>User experience</th>
+<th>Typical fit for a small business</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FIDO2 security keys</td>
+<td>Strong, because the login is tied to the real site</td>
+<td>Very simple once issued</td>
+<td>Good for admins, finance, and high-risk accounts</td>
+</tr>
+<tr>
+<td>Passkeys</td>
+<td>Strong, because the site authentication is cryptographic</td>
+<td>Usually the easiest for staff</td>
+<td>Good for everyday sign-in on managed laptops and phones</td>
+</tr>
+<tr>
+<td>SMS codes</td>
+<td>Better than passwords alone, but still phishable</td>
+<td>Familiar, but extra steps</td>
+<td>Works as a basic backup, not the best phishing-resistant choice</td>
+</tr>
+<tr>
+<td>Authenticator app codes</td>
+<td>Better than passwords alone, but still phishable</td>
+<td>Common and fairly easy</td>
+<td>Fine as a step up from passwords, but not phishing-resistant</td>
+</tr>
+<tr>
+<td>Push approvals</td>
+<td>Convenient, but can be abused in relay or fatigue attacks</td>
+<td>Very easy, maybe too easy</td>
+<td>Useful, but not the first pick for phishing resistance</td>
+</tr>
+</tbody></table>
+<h2>Which method should a small business choose first</h2>
+<p>Start with the method that best fits your devices, staff mobility, and sign-in workflow. If your team mostly uses managed laptops and phones, passkeys are often the easiest first step. If you want a very strong option for admins or a few critical accounts, FIDO2 security keys are a solid place to start. NIST and CISA favor phishing-resistant authenticators for stronger protection, and that is the part worth caring about when attackers are trying the usual password-reuse nonsense.</p>
+<p>If you are also building the basics around this, the FTC’s <a href="https://smallbizsecuritytips.blog/what-cybersecurity-basics-does-the-ftc-recommend-for-small/">cybersecurity guidance for small businesses</a> is a useful companion, because it reinforces the broader move to use MFA and reduce phishing risk.</p>
+<h2>How this fits with checking for a business email breach</h2>
+<p>If a business email appears in a breach, phishing-resistant MFA can help reduce risk. That matters because email is usually the front door to everything else. Once an attacker gets in there, they do not politely stop at one inbox.</p>
+<h2>FAQ</h2>
+<h3>Should I replace all MFA at once?</h3>
+<p>No. A practical rollout is to start with the highest-risk accounts first, then expand from there. Keep the process simple for non-technical teams, because complicated rollouts tend to become “we meant to do that later” projects.</p>
+<h3>Are authenticator apps enough?</h3>
+<p>They help, and they are better than passwords alone. But they are not considered phishing-resistant in the same way as FIDO-based methods like security keys and passkeys.</p>
+
+</article>
+</main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Content is informational only and is not legal or security advice, verify against the linked primary sources before acting.</p>
+<p class="disc-note">Disclosure: this site features commercial partners and promoted placements, which can influence which products appear and how they are ranked. Comparisons reflect our own research and opinion. Verify current pricing and features on each provider’s site before buying.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
