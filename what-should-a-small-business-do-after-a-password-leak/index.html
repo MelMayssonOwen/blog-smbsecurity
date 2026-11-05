@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Should a Small Business Do After a Password Leak?</title>
+<meta name="description" content="Treat a leaked password as a possible account-compromise event. Change the password everywhere it was reused, lock down recovery and sign-in settings, check for takeover signs, and document what happened before resuming normal work, following CISA, FTC, and NIST guidance.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Should a Small Business Do After a Password Leak?">
+<meta property="og:description" content="Treat a leaked password as a possible account-compromise event. Change the password everywhere it was reused, lock down recovery and sign-in settings, check for takeover signs, and document what happened before resuming normal work, following CISA, FTC, and NIST guidance.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smallbizsecuritytips.blog/"},{"@type":"ListItem","position":2,"name":"What Should a Small Business Do After a Password Leak?","item":"https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Should a Small Business Do After a Password Leak?","description":"Treat a leaked password as a possible account-compromise event. Change the password everywhere it was reused, lock down recovery and sign-in settings, check for takeover signs, and document what happened before resuming normal work, following CISA, FTC, and NIST guidance.","datePublished":"2026-11-05T16:26:01.264Z","dateModified":"2026-11-05T16:26:01.264Z","mainEntityOfPage":"https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/","author":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"},"publisher":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"}}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / About</div><main class="wrap">
+<div class="crumb"><a href="/">Home</a> / What Should a Small Business Do After a Password Leak?</div>
+<article>
+<h1>What Should a Small Business Do After a Password Leak?</h1>
+<p class="updated">Published 2026-11-05</p>
+<div class="tldr"><p><strong>TL;DR:</strong> Treat a leaked password as a possible account-compromise event. Change the password everywhere it was reused, lock down recovery and sign-in settings, check for takeover signs, and document what happened before resuming normal work, following CISA, FTC, and NIST guidance.</p></div>
+<h2>Intro</h2>
+<p>A small business should treat a leaked password like a possible account-compromise event, not a harmless “oops.” First, change the password everywhere it was reused, lock down sign-in and recovery settings, and check for signs of unauthorized access before you go back to normal. That lines up with CISA and FTC guidance on containment, account recovery, and using unique passwords. If business email was involved, look for forwarding rules, recovery changes, and other signs of account takeover.</p>
+<h2>Confirm whether the leak affects a business account</h2>
+<p>Start by figuring out what the exposed password actually belongs to. Was it business email, a shared mailbox, an admin account, or any account that can reach customer data, billing, payroll, or payment tools? If it is tied to something that can reset passwords or approve access, treat it as high risk right away.</p>
+<p>If you are still at the “is this even ours?” stage, use the site’s related breach-checking topic for the first identification step, then move from guesswork to a real inventory of the account and where it connects. That is the difference between a nuisance and a full-blown “why is accounting locked out?” afternoon.</p>
+<h2>Contain the account right away</h2>
+<p>Once you confirm the account matters, contain it immediately. Change the affected password. Change any other passwords that were reused. Sign out other sessions if the service allows it. Review recovery email addresses, phone numbers, and backup codes, and remove anything suspicious or unfamiliar. If a login method no longer looks safe, disable it and replace it with something you can actually control.</p>
+<p>CISA and NIST both support tight account recovery and session-control hygiene, because a leaked password is only one piece of the mess. If an attacker already has the session token or a recovery path, a password change alone can be too polite.</p>
+<h2>Check for signs of account takeover</h2>
+<p>Now look for the obvious weirdness, in plain language. Search for new inbox rules, unexpected sent mail, password reset emails you did not request, changed recovery contact details, unfamiliar devices or locations, and new admin or sharing permissions.</p>
+<p>CISA incident-response guidance points businesses toward this kind of quick triage, because attackers often leave little clues before they make a bigger move. The goal is not to become a forensic wizard. It is to spot the “this mailbox is acting like it drank three coffees” signs before more damage spreads.</p>
+<h2>Protect the rest of the business accounts</h2>
+<p>Do not stop at the one password. Review every account that used the same password, or is linked to the same email address. Then tighten access to any service that connects to email, billing, payroll, or customer records.</p>
+<p>FTC and NIST guidance both support unique passwords and least access, which means people and systems should only have the access they actually need. If one mailbox or login can reach too much, a leak turns into a very efficient tour of your business systems.</p>
+<h2>Tell the right people and document what happened</h2>
+<p>Notify the email provider if the account is behaving strangely or recovery details were changed. Tell internal team members who use the account so they do not keep trusting a compromised mailbox. If payment systems, banks, or processors could be affected, notify those partners too.</p>
+<p>If business data may have been exposed, or if the activity could involve a crime, consider law enforcement and customer notification where appropriate. Keep a simple incident log, what happened, when you noticed it, what you changed, and who you told. CISA-style response planning favors that kind of record because it keeps the business from relying on memory, which is charmingly unreliable under stress.</p>
+<h2>Worked example: leaked shared mailbox password in a two-person office</h2>
+<p>Say a two-person office learns that the password for a shared mailbox showed up in a breach. Here is the practical sequence:</p>
+<ol>
+<li>Change the shared mailbox password.</li>
+<li>Review forwarding rules, filters, and recovery settings.</li>
+<li>Sign out active sessions and remove anything unfamiliar.</li>
+<li>Check recent mail activity for sent messages, password reset requests, or permission changes.</li>
+<li>Reset any connected services that use that mailbox for alerts, billing, or logins.</li>
+<li>Confirm neither staff member reused the same password on another account.</li>
+</ol>
+<p>That is enough to get from “we have a problem” to “we reduced the blast radius” without needing a full security theater production.</p>
+<h2>Prevent the next leak from becoming an incident</h2>
+<p>After the cleanup, harden the basics. Use unique passwords. Turn on MFA. Keep a written recovery plan. Limit who can reset passwords or change recovery settings. Review access on business-critical accounts, especially email, billing, payroll, and customer record systems.</p>
+<p>That mix is backed by FTC, CISA, and NIST guidance, and it matters because the next leaked password should not automatically become the next outage. A small business does not need perfection. It needs fewer easy doors left propped open.</p>
+<h2>Related reading for the next step</h2>
+<p>For the immediate reset and reuse-check workflow, see <a href="https://smallbizsecuritytips.blog/what-to-do-if-your-password-has-been-leaked/">what to do if your password has been leaked</a>, which goes deeper on the first cleanup steps.</p>
+<p>For the broader hardening work that should follow, see <a href="https://smallbizsecuritytips.blog/what-cybersecurity-basics-does-the-ftc-recommend-for-small/">what cybersecurity basics does the FTC recommend for small businesses?</a>, which supports the unique-password, MFA, backup, and access-limiting follow-up.</p>
+
+</article>
+</main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Content is informational only and is not legal or security advice, verify against the linked primary sources before acting.</p>
+<p class="disc-note">Disclosure: this site features commercial partners and promoted placements, which can influence which products appear and how they are ranked. Comparisons reflect our own research and opinion. Verify current pricing and features on each provider’s site before buying.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
