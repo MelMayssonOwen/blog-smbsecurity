@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Are the Three Main Components of User Access Control?</title>
+<meta name="description" content="User access control is usually built from three parts: identification, authentication, and authorization. For small businesses, that means knowing which account is involved, proving the person really is that user, and limiting what the account can do if it gets compromised.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/what-are-the-three-main-components-of-user-access-control/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Are the Three Main Components of User Access Control?">
+<meta property="og:description" content="User access control is usually built from three parts: identification, authentication, and authorization. For small businesses, that means knowing which account is involved, proving the person really is that user, and limiting what the account can do if it gets compromised.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/what-are-the-three-main-components-of-user-access-control/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smallbizsecuritytips.blog/"},{"@type":"ListItem","position":2,"name":"What Are the Three Main Components of User Access Control?","item":"https://smallbizsecuritytips.blog/what-are-the-three-main-components-of-user-access-control/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Are the Three Main Components of User Access Control?","description":"User access control is usually built from three parts: identification, authentication, and authorization. For small businesses, that means knowing which account is involved, proving the person really is that user, and limiting what the account can do if it gets compromised.","datePublished":"2026-11-06T16:42:01.981Z","dateModified":"2026-11-06T16:42:01.981Z","mainEntityOfPage":"https://smallbizsecuritytips.blog/what-are-the-three-main-components-of-user-access-control/","author":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"},"publisher":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"}}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / About</div><main class="wrap">
+<div class="crumb"><a href="/">Home</a> / What Are the Three Main Components of User Access Control?</div>
+<article>
+<h1>What Are the Three Main Components of User Access Control?</h1>
+<p class="updated">Published 2026-11-06</p>
+<div class="tldr"><p><strong>TL;DR:</strong> User access control is usually built from three parts: identification, authentication, and authorization. For small businesses, that means knowing which account is involved, proving the person really is that user, and limiting what the account can do if it gets compromised.</p></div>
+<h2>Opening paragraph</h2>
+<p>Access management generally rests on three elements: identification, authentication, and authorization. This model also helps small firms determine who may enter business email and what actions they can take after logging in, which is very much in line with <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST SP 800-63B</a> and the FTC’s <a href="https://www.ftc.gov/business-guidance/small-businesses/cybersecurity">cybersecurity basics for small businesses</a>.</p>
+<h2>Identification</h2>
+<p>Identification is how a system knows which person is trying to sign in. Usually that is a username, email address, or some other account identifier.</p>
+<p>For a small business, this matters because you first need to know which account may have been exposed. If you are checking a business email incident, the starting point is not “who knows the password,” it is “which account was actually being used.” That is the account you inspect for strange sign-ins, forwarding rules, or other weird little surprises.</p>
+<h2>Authentication</h2>
+<p>Authentication is how the system verifies the person is really that user. That usually means a password, multi-factor authentication, or both.</p>
+<p>In a business-email-breach situation, this layer is the one that gets shaky when a password leaks. If the password is out in the wild, the system may still ask for it, but the trust part is gone. If you need a practical next step for that scenario, see <a href="https://smallbizsecuritytips.blog/what-to-do-if-your-password-has-been-leaked/">What to do if your password has been leaked</a>.</p>
+<h2>Authorization</h2>
+<p>Authorization is what the verified user is allowed to do. That might mean reading email, changing settings, or managing other accounts.</p>
+<p>Limiting permissions helps reduce harm if an account is compromised. If someone gets into a regular mailbox, that is bad enough. If the same login can also change admin settings, now the problem has extra legs.</p>
+<h2>Worked example</h2>
+<p>Say an employee signs in to business email with their work email address. That identifies the account. Then they prove they are really that user with the required sign-in method, which authenticates them. After that, the system lets them read mail, but not change admin settings unless that permission was specifically granted.</p>
+<p>That simple flow helps owners see where to check for exposure or over-broad access. If the account was identified correctly but the sign-in method was weak, authentication is the weak spot. If the person could do far more than their job needed, authorization is the thing to trim back.</p>
+<h2>How the three parts help after a breach check</h2>
+<p>For a small business owner without an IT team, the practical checklist is pretty simple: confirm which account was identified, whether authentication was strong enough, and whether authorization was too broad.</p>
+<p>Use that to decide what to reset, review, or remove. If the wrong account was used, fix the account record. If the sign-in method was weak, strengthen or reset it. If access was broader than it should have been, cut it back before the next surprise guest shows up.</p>
+<h2>Related next step</h2>
+<p>If you need to turn this into action, the access-removal article helps translate the three components into real cleanup when an employee leaves or an account should no longer have access: <a href="https://smallbizsecuritytips.blog/what-access-rights-should-be-removed-when-an-employee-leaves/">What access rights should be removed when an employee leaves?</a>.</p>
+
+</article>
+</main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Content is informational only and is not legal or security advice, verify against the linked primary sources before acting.</p>
+<p class="disc-note">Disclosure: this site features commercial partners and promoted placements, which can influence which products appear and how they are ranked. Comparisons reflect our own research and opinion. Verify current pricing and features on each provider’s site before buying.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
