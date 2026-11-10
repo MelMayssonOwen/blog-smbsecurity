@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Does My MFA Not Work?</title>
+<meta name="description" content="MFA usually fails because a required check cannot be completed, the method was set up wrong, or the account settings or device have changed. Start by identifying whether the issue is the code, the prompt, the account, or a possible compromise, then use the approved recovery path and check for suspicious changes.">
+<link rel="canonical" href="https://smallbizsecuritytips.blog/why-does-my-mfa-not-work/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Does My MFA Not Work?">
+<meta property="og:description" content="MFA usually fails because a required check cannot be completed, the method was set up wrong, or the account settings or device have changed. Start by identifying whether the issue is the code, the prompt, the account, or a possible compromise, then use the approved recovery path and check for suspicious changes.">
+<meta property="og:url" content="https://smallbizsecuritytips.blog/why-does-my-mfa-not-work/">
+<meta property="og:site_name" content="SmallBizSecurityTips">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z' fill='%230c7a72'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smallbizsecuritytips.blog/"},{"@type":"ListItem","position":2,"name":"Why Does My MFA Not Work?","item":"https://smallbizsecuritytips.blog/why-does-my-mfa-not-work/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Does My MFA Not Work?","description":"MFA usually fails because a required check cannot be completed, the method was set up wrong, or the account settings or device have changed. Start by identifying whether the issue is the code, the prompt, the account, or a possible compromise, then use the approved recovery path and check for suspicious changes.","datePublished":"2026-11-10T17:10:00.654Z","dateModified":"2026-11-10T17:10:00.654Z","mainEntityOfPage":"https://smallbizsecuritytips.blog/why-does-my-mfa-not-work/","author":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"},"publisher":{"@type":"Organization","name":"SmallBizSecurityTips","url":"https://smallbizsecuritytips.blog/"}}</script>
+</head>
+<body><header class="site"><div class="wrap">
+<a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 1.6 3 5.4v6.1c0 5.7 3.9 9.9 10 12.9 6.1-3 10-7.2 10-12.9V5.4L13 1.6Z" fill="#0c7a72" stroke="#8fb7b3" stroke-width="1.1"/><path d="M7.5 13.2h2.2l1.6 4 2.4-7 1.5 3h3.3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bt"><b>SmallBizSecurityTips</b><span>Breach &amp; credential monitoring</span></span></a>
+<nav class="site"><a href="/">Home</a><a href="/guide/what-is-dark-web-monitoring/">Guides</a><a href="/blog/best-dark-web-monitoring-tools-small-business/">Compare</a><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing</a><a href="/faq/">FAQ</a><a href="/about/">About</a></nav>
+</div></header><div class="crumb wrap"><a href="/">Home</a> / About</div><main class="wrap">
+<div class="crumb"><a href="/">Home</a> / Why Does My MFA Not Work?</div>
+<article>
+<h1>Why Does My MFA Not Work?</h1>
+<p class="updated">Published 2026-11-10</p>
+<div class="tldr"><p><strong>TL;DR:</strong> MFA usually fails because a required check cannot be completed, the method was set up wrong, or the account settings or device have changed. Start by identifying whether the issue is the code, the prompt, the account, or a possible compromise, then use the approved recovery path and check for suspicious changes.</p></div>
+<h2>The most common reasons MFA does not work</h2>
+<p>Multi-factor authentication usually fails for one of three reasons: the user cannot complete a required check, the method was set up incorrectly, or something is interfering with sign-in, such as recovery settings, a device issue, or a possible compromise. That matches FTC, CISA, and NIST guidance that MFA is one layer of account security, not a guarantee.</p>
+<p>If MFA is failing, the first question is not whether MFA is broken. It is which check is breaking. That narrows the fix fast.</p>
+<h2>Check the type of failure first</h2>
+<p>Sort the problem into one of these buckets:</p>
+<ul>
+<li><strong>Can’t receive the code</strong>. The text, email, or app prompt never arrives.</li>
+<li><strong>Code is accepted but sign-in still fails</strong>. The MFA step works, but the account still will not let you in.</li>
+<li><strong>The prompt never appears</strong>. You expected an MFA prompt and got nothing.</li>
+<li><strong>The account seems to have changed</strong>. Recovery info, passwords, or sign-in settings look different.</li>
+</ul>
+<p>Each one points to a different fix. If you guess wrong, you can waste time checking the wrong thing.</p>
+<h2>Common setup and device problems</h2>
+<p>A lot of MFA failures are setup problems, not security incidents.</p>
+<p>One common issue is an authenticator clock that is out of sync. NIST guidance allows time-based one-time password methods, but if the device clock is off, the code can be rejected. Another common problem is that the phone number or email on file is wrong, so the code goes somewhere nobody checks anymore. CISA and NIST also stress that the MFA method has to be properly enrolled and available on the account, not half-set-up in a settings page.</p>
+<p>A new device, browser, or app can also trigger extra verification. That is normal when the service treats the login as coming from an untrusted device.</p>
+<p>For small business owners, the practical check is simple: confirm the MFA method was fully enrolled, make sure the recovery phone or email is current, and verify that the device being used is the one that was registered.</p>
+<h2>Account and recovery settings that block MFA</h2>
+<p>Sometimes MFA looks broken when the account is doing exactly what it was told to do, which is irritating in a very specific way.</p>
+<p>Changed recovery details can lock the real owner out. Lost backup access can do the same thing if the only approved method is on a phone that was replaced, wiped, or left in a drawer. Forwarding rules can also send codes or alerts to the wrong inbox, so the user thinks nothing arrived when it really did, just not where it should have. CISA and FTC guidance both support checking account settings directly, because the fix often lives there, not on the sign-in screen.</p>
+<p>If this is a business account, the owner or admin should check the account settings directly, not just ask the employee whether they tried turning it off and on again. Verify the recovery email, phone number, backup codes, forwarding rules, and any admin-level sign-in policy that might be forcing a different method.</p>
+<h2>Signs the MFA problem may be part of a compromise</h2>
+<p>Sometimes MFA does not fail. Someone else is probing the account.</p>
+<p>Treat these as warning signs:</p>
+<ul>
+<li>unexpected password reset emails or prompts</li>
+<li>recovery options that have changed without permission</li>
+<li>unfamiliar MFA prompts</li>
+<li>login attempts the user did not start</li>
+<li>missing email or messages that used to arrive normally</li>
+</ul>
+<p>Under CISA and FTC guidance, those can be account takeover signs, not just glitches. If the account suddenly behaves differently, assume someone may be trying to get in or has already changed settings.</p>
+<h2>What to do next, step by step</h2>
+<p>Here is the practical recovery path for a small business without an IT team:</p>
+<ol>
+<li><p><strong>Verify the sign-in page is legitimate.</strong>
+Do not enter credentials into a random page from an email, text, or chat message.</p>
+</li>
+<li><p><strong>Retry the approved MFA method.</strong>
+Use the method the account already recognizes, if it is available.</p>
+</li>
+<li><p><strong>Use a backup method if one was set up.</strong>
+Backup codes, a secondary phone, or another approved method may still work.</p>
+</li>
+<li><p><strong>Check and restore account recovery settings.</strong>
+Confirm the recovery email, phone number, and forwarding rules are correct.</p>
+</li>
+<li><p><strong>Review recent sign-in activity.</strong>
+Look for unfamiliar devices, locations, or repeated failed attempts.</p>
+</li>
+<li><p><strong>Change the password if there is any sign of compromise.</strong>
+Do this right away if recovery options changed, if a reset was unexpected, or if the account activity looks off.</p>
+</li>
+<li><p><strong>Remove anything that should not be there.</strong>
+That includes suspicious forwarding rules, unknown recovery methods, and unfamiliar devices or sessions.</p>
+</li>
+</ol>
+<p>If the issue is only a device or enrollment problem, these steps usually fix it. If the account has been tampered with, they help contain the damage before it spreads.</p>
+<p>If you want a broader checklist for suspected takeover, <a href="https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/">What should a small business do after a password leak?</a> covers the recovery side. If the sign-in problem might really be a stolen-code or replay issue, <a href="https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/">What are phishing-resistant MFA methods?</a> explains why some methods hold up better when attackers try to copy the login flow.</p>
+<h2>Worked example: when MFA stops working after a password reset</h2>
+<p>Say a staff member resets their password after forgetting it. The password works, but MFA suddenly does not.</p>
+<p>What probably happened? The reset process may have cleared the old trusted session, or the account may now want a different verification method than the one the employee used before. If the employee also changed phones recently, the old authenticator app may no longer be connected to the account.</p>
+<p>The fix is to confirm the legitimate sign-in page, use the approved recovery path, and then re-enroll MFA from the account’s security settings. If the business still has backup access, an admin can verify the recovery contact details and restore the approved method without weakening the account. The point is to rebuild access cleanly, not to disable MFA because it caused trouble for ten minutes.</p>
+<h2>When to treat it as an incident</h2>
+<p>Treat MFA failure as an incident when it comes with suspicious logins, forwarding changes, missing email, or recovery options that no one on the team changed.</p>
+<p>At that point, the business should preserve evidence, review recent activity, and follow incident-response steps. CISA and FTC guidance both support treating likely account takeover as a security event, especially if business email may be involved. If email is missing, forwarding has changed, or an attacker may have used the account, do not just reset and hope for the best. Check what changed first.</p>
+<h2>Related reading</h2>
+<ul>
+<li><a href="https://smallbizsecuritytips.blog/what-should-a-small-business-do-after-a-password-leak/">What should a small business do after a password leak?</a> because leaked credentials can lead to MFA trouble or account takeover.</li>
+<li><a href="https://smallbizsecuritytips.blog/what-are-phishing-resistant-mfa-methods/">What are phishing-resistant MFA methods?</a> because some MFA failures are really phishing or token-replay problems in disguise.</li>
+</ul>
+
+</article>
+</main><footer class="site"><div class="wrap">
+<div class="cols">
+<div><h4>Compare</h4><ul>
+<li><a href="/blog/best-dark-web-monitoring-tools-small-business/">Best tools 2026</a></li>
+<li><a href="/pricing/dark-web-monitoring-cost-comparison/">Pricing compared</a></li>
+<li><a href="/alternatives/have-i-been-pwned/">HIBP alternatives</a></li>
+<li><a href="/vs/dark-web-id/">vs Dark Web ID</a></li>
+<li><a href="/vs/spycloud/">vs SpyCloud</a></li>
+</ul></div>
+<div><h4>Guides</h4><ul>
+<li><a href="/guide/what-is-dark-web-monitoring/">What is dark web monitoring</a></li>
+<li><a href="/guide/is-free-hibp-enough/">Is free HIBP enough?</a></li>
+<li><a href="/guide/does-dark-web-monitoring-remove-data/">Does it remove your data?</a></li>
+<li><a href="/guide/mfa-and-infostealers/">MFA &amp; infostealers</a></li>
+<li><a href="/how-to/set-up-leaked-credential-monitoring/">15-min setup</a></li>
+</ul></div>
+<div><h4>Reference</h4><ul>
+<li><a href="/guide/nist-password-breach-check/">NIST password rules</a></li>
+<li><a href="/guide/what-is-an-infostealer/">What is an infostealer</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/about/">About &amp; method</a></li>
+</ul></div>
+</div>
+<div class="fine">
+<p>SmallBizSecurityTips is an independent guide to small-business breach and leaked-credential monitoring. We compare tools honestly and link to primary sources (CISA, FTC, NIST, and each vendor&rsquo;s own documentation). Content is informational only and is not legal or security advice, verify against the linked primary sources before acting.</p>
+<p class="disc-note">Disclosure: this site features commercial partners and promoted placements, which can influence which products appear and how they are ranked. Comparisons reflect our own research and opinion. Verify current pricing and features on each provider’s site before buying.</p>
+<p>&copy; 2026 SmallBizSecurityTips. Updated August 2026.</p>
+</div>
+</div></footer></body></html>
